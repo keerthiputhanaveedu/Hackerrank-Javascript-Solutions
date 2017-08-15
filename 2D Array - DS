@@ -21,3 +21,36 @@ function main() {
     
     console.log(count);
 }
+
+
+                                            ------- or we can use sort method--------
+ function main() {
+    var arr = [];
+    
+    var array[h]; var index = 0; //declare
+    
+    var count = 0;
+    for(arr_i = 0; arr_i < 6; arr_i++){
+       arr[arr_i] = readLine().split(' ');
+       arr[arr_i] = arr[arr_i].map(Number);
+        
+    }
+    
+    for ( var i = 0; i <=3; i++){
+        for(var j=0; j<=3; j++){
+            
+            array[index] = arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i+1][j+1]+arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];
+            index++
+        }
+    }
+    
+    console.log(array.sort(function(a,b){
+    return a - b;
+    })[15]; //15 because it is a 2D array, 6*6 dimensions has 16 hourglasses.
+}
+                                         
+                                                Logic Explanation
+                                            
+                              arr[i]+[j]a         arr[i]+[j+1]b        arr[i]+[j+2]c
+                                                  arr[i+1]+[j+1]d
+                              arr[i+2]+[j]e       arr[i]+[j+1]f        arr[i]+[j+2]g
